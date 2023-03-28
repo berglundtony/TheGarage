@@ -1,0 +1,54 @@
+﻿@model TheGarage.Web.Models.CarModel
+
+@{
+    ViewData["Title"] = "CarDetail";
+}
+
+<h1>CarDetail</h1>
+
+<div id="details">
+    <h4>CarModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RegistryNumber)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RegistryNumber)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Brand)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Brand)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Model)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Model)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.YearModel)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.YearModel)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Color)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Color)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="UpdateCar" asp-route-registryNumber="@Model.RegistryNumber">Edit</a> |
+    <a asp-action="DeleteCar" asp-route-registryNumber="@Model.RegistryNumber">Delete</a> 
+    <a asp-action="Index">Back to List</a>
+</div>
+@*<script src="https://unpkg.com/apollo-client-browser@1.9.0"></script>
+<script src="~/js/details.js"></script>
+<script language="text/javascript">
+    renderDetail(@Model.RegistryNumber);
+</script>*@

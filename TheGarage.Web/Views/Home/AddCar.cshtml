@@ -1,0 +1,60 @@
+﻿@model TheGarage.Web.Models.CarModel
+
+@{
+    ViewData["Title"] = "AddCar";
+}
+
+<h4>AddCar</h4>
+
+<form asp-action="AddCar">
+    <div class="row mb-2 form-group">
+        <div class="col-3">
+            <label asp-for="RegistryNumber"></label>
+        </div>
+        <div class="col-9">
+            <input class="form-control" type="text" asp-for="RegistryNumber" />
+        </div>
+    </div>
+    <div class="row mb-2 form-group">
+        <div class="col-3">
+            <label asp-for="Brand"></label>
+        </div>
+        <div class="col-9">
+            <input class="form-control" type="text" asp-for="Brand" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <label asp-for="Model"></label>
+        </div>
+        <div class="col-9">
+            <input class="form-control" type="text" asp-for="Model" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <label asp-for="YearModel"></label>
+        </div>
+        <div class="col-9">
+            <input class="form-control" type="text" asp-for="YearModel" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <label asp-for="Color"></label>
+        </div>
+        <div class="col-9">
+            <input class="form-control" type="text" asp-for="Color" />
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

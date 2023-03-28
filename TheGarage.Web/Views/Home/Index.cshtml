@@ -1,0 +1,26 @@
+﻿@model IEnumerable<TheGarage.Web.Models.CarModel>
+
+
+<div class="col-12">
+    <div class="row">
+        <div class="col-6">
+            <h4>Cars:</h4>
+        </div>
+        <div class="col-6">
+            <a class="btn btn-primary" asp-action="AddCar">Add a Car</a>
+        </div>
+    </div>
+</div>
+
+
+@foreach (var car in Model)
+{
+    <div class="row">
+        <div class="col-2 my-auto"><a asp-action="CarDetail" asp-route-registryNumber="@car.RegistryNumber">@car.Brand</a></div>
+        <div class="col-2 my-auto">@car.Model</div>
+        <div class="col-2 my-auto">@car.Color</div>
+        <div class="col-2 my-auto">@car.YearModel</div>
+    </div>
+}
+
+
